@@ -110,20 +110,10 @@ nav{
 }
 
 /* ── BG DECORATIONS ── */
-.grid-bg::before{
-  content:"";position:absolute;inset:0;
-  background-image:
-    linear-gradient(rgba(245,247,245,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(245,247,245,0.04) 1px, transparent 1px);
-  background-size:56px 56px;
-  mask-image:radial-gradient(ellipse 80% 60% at 50% 45%, #000 30%, transparent 80%);
-  -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 45%, #000 30%, transparent 80%);
-  pointer-events:none;
-}
-.light .grid-bg::before,.grid-bg.light-grid::before{
-  background-image:
-    linear-gradient(rgba(6,20,20,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(6,20,20,0.04) 1px, transparent 1px);
+.grid-bg::before,
+.light .grid-bg::before,
+.grid-bg.light-grid::before{
+  display:none!important;
 }
 .green-glow{
   position:absolute;border-radius:50%;
@@ -706,6 +696,23 @@ nav{
 .compare-col.good .next-step-row{border-color:rgba(36,238,137,0.14)}
 .compare-col.bad .next-step-row{border-color:rgba(255,107,107,0.14)}
 
+  .slide-logo-widergy{
+  position:absolute;
+  top:96px;
+  right:80px;
+  width:140px;
+  height:auto;
+  z-index:5;
+  opacity:0.96;
+}
+
+@media(max-width:640px){
+  .slide-logo-widergy{
+    top:78px;
+    right:24px;
+    width:110px;
+  }
+}
 /* ── RESPONSIVE ── */
 @media(max-width:1100px){
   .slide{padding:88px 40px 60px}
@@ -751,6 +758,11 @@ nav{
 <section class="slide dark grid-bg" id="s1">
   <div class="green-glow top-left"></div>
   <div class="green-glow bot-right"></div>
+    <img 
+    src="LOGO_WIDERGY_AQUI.svg" 
+    alt="Widergy" 
+    class="slide-logo-widergy"
+  />
   <div class="hero-wrap">
     <div class="hero-meta awareness a">
       <span>CUSTOMER VALUE OFFICE · MAYO 2026</span>
